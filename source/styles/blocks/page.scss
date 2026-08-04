@@ -9,3 +9,25 @@
   font-size: 15px;
   line-height: 200%;
 }
+
+.page__layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  min-height: 100vh;
+}
+
+.page__header {
+  grid-area: header;
+}
+
+.page__content-wrapper {
+  grid-area: content;
+}
+
+.page__footer {
+  grid-area: footer;
+}
