@@ -3,13 +3,18 @@
 @import "./common/variables.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
 @import "./blocks/container.scss";
 @import "./blocks/logo.scss";
+@import "./blocks/logo-secondary.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/social.scss";
 @import "./blocks/site-nav.scss";
 @import "./blocks/user-nav.scss";
 @import "./blocks/category-nav.scss";
 @import "./blocks/toggle-button.scss";
 @import "./blocks/main-nav.scss";
+@import "./blocks/page-footer.scss";
 @import "./blocks/page.scss";

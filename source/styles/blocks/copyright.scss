@@ -1,0 +1,28 @@
+.copyright {
+  --icon-fill: #63d1bb;
+  --icon-opacity: 1;
+
+  display: flex;
+  gap: 27px;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 95%;
+  color: $text-color-secondary;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  fill: var(--icon-fill);
+  fill-opacity: var(--icon-opacity);
+
+  &:hover,
+  &:focus-visible {
+    --icon-fill: #46c1ae;
+  }
+
+  &:active {
+    --icon-opacity: 0.3;
+  }
+}

@@ -1,0 +1,22 @@
+.logo-secondary {
+  --icon-fill: #000000;
+  --icon-opacity: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  fill: var(--icon-fill);
+  fill-opacity: var(--icon-opacity);
+
+  &:hover,
+  &:focus-visible {
+    --icon-fill: #46c1ae;
+  }
+
+  &:active {
+    --icon-opacity: 0.3;
+  }
+}
