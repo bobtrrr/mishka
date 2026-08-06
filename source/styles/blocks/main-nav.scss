@@ -23,11 +23,7 @@
 
     background-color: #ececec;
 
-    box-shadow:
-      100vw 0 0 #ececec,
-      200vw 0 0 #ececec,
-      -100vw 0 0 #ececec,
-      -200vw 0 0 #ececec;
+    box-shadow: 100vw 0 0 #ececec;
   }
 
   @media (min-width: $tablet-width) {
@@ -48,9 +44,12 @@
     top: -500px;
     left: 0;
     right: 0;
+    z-index: 1;
 
     visibility: hidden;
     opacity: 0;
+
+    background-color: $bg-color-accent;
   }
 
   @media (min-width: $tablet-width) {

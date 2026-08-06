@@ -77,7 +77,38 @@
     </div>
   </header>
 
-  <div class="page__content-wrapper"></div>
+  <div class="page__content-wrapper">
+    <main class="page__content">
+      <section class="page__hero hero">
+
+        <div class="container">
+          <div class="hero__content-wrapper">
+            <h1 class="hero__title">Милые штуки <br> ручной <br> работы для дома</h1>
+
+            <picture class="hero__image-wrapper">
+              <source media="(min-width: 1110px)" srcset="./images/hero-bg-desktop@1x.webp 1x, ./images/hero-bg-desktop@2x.webp 2x" type="image/webp" width="1150" height="746">
+              <source media="(min-width: 1110px)" srcset="./images/hero-bg-desktop@1x.png 1x, ./images/hero-bg-desktop@2x.png 2x" type="image/png" width="1150" height="746">
+
+              <source media="(min-width: 728px)" srcset="./images/hero-bg-tablet@1x.webp 1x, ./images/hero-bg-tablet@2x.webp 2x" type="image/webp" width="748" height="746">
+              <source media="(min-width: 728px)" srcset="./images/hero-bg-tablet@1x.png 1x, ./images/hero-bg-tablet@2x.png 2x" type="image/png" width="748" height="746">
+
+              <source srcset="./images/hero-bg-mobile@1x.webp 1x, ./images/hero-bg-mobile@2x.webp 2x" type="image/webp">
+              <img class="hero__image" src="./images/hero-bg@1x.png" width="320" height="373" srcset="./images/hero-bg@2x.png 2x" alt="#">
+            </picture>
+
+            <ul class="hero__nav">
+              <li class="hero__nav-item">
+                <a class="hero__nav-link hero__nav-link--interior" href="#">Предметы <br> интерьера</a>
+              </li>
+              <li class="hero__nav-item">
+                <a class="hero__nav-link hero__nav-link--toy" href="#">Детские <br> игрушки</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 
   <footer class="page__footer page-footer">
     <div class="page-footer__content-wrapper container">
