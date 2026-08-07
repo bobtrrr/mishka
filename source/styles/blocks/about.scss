@@ -1,0 +1,246 @@
+.about {
+  padding-top: 30px;
+  padding-bottom: 58px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+    padding-bottom: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 68px 175px 89px;
+  }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 28px;
+
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 120%;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+
+    font-size: 43px;
+    line-height: 116%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 108%;
+  }
+}
+
+.about__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 29px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "eco   handmade"
+      "style rocket"
+      "heart gift";
+    gap: 55px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 85px;
+  }
+}
+
+.about__item {
+  position: relative;
+
+  margin: 0;
+  padding-top: 54px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 118%;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 56px;
+
+    font-size: 20px;
+    line-height: 110%;
+  }
+}
+
+.about__item--eco,
+.about__item--style,
+.about__item--heart,
+.about__item--handmade,
+.about__item--rocket,
+.about__item--gift {
+  &::before {
+    content: "";
+
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+}
+
+.about__item--eco {
+  &::before {
+    left: 8px;
+    top: 0;
+
+    width: 33px;
+    height: 38px;
+
+    background-image: url("./../../icons/icon-eco.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: eco;
+
+    &::before {
+      left: 7px;
+    }
+  }
+}
+
+.about__item--style {
+  &::before {
+    left: 0;
+    top: 1px;
+
+    width: 47px;
+    height: 27px;
+
+    background-image: url("./../../icons/icon-style.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: style;
+
+    &::before {
+      top: 3px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      left: 1px;
+      top: 2px;
+    }
+  }
+}
+
+.about__item--heart {
+  &::before {
+    left: 7px;
+    top: 6px;
+
+    width: 34px;
+    height: 27px;
+
+    background-image: url("./../../icons/icon-heart.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: heart;
+
+    &::before {
+      top: 7px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      left: 8px;
+    }
+  }
+}
+
+.about__item--handmade {
+  &::before {
+    left: 3px;
+    top: 3px;
+
+    width: 35px;
+    height: 34px;
+
+    background-image: url("./../../icons/icon-handmade.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: handmade;
+
+    &::before {
+      left: 2px;
+      top: 4px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      left: 3px;
+    }
+  }
+}
+
+.about__item--rocket {
+  &::before {
+    left: -6px;
+    top: 4px;
+
+    width: 55px;
+    height: 23px;
+
+    background-image: url("./../../icons/icon-rocket.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: rocket;
+
+    &::before {
+      left: -9px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 5px;
+      left: -6px;
+    }
+  }
+}
+
+.about__item--gift {
+  &::before {
+    left: 3px;
+    top: 0;
+
+    width: 33px;
+    height: 32px;
+
+    background-image: url("./../../icons/icon-gift.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: gift;
+
+    &::before {
+      left: 0;
+      top: 3px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      left: 3px;
+    }
+  }
+}
