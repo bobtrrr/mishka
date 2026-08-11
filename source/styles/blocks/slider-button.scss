@@ -1,0 +1,23 @@
+.slider-button {
+  display: inline-flex;
+  justify-content: center;
+
+  padding: 13px 42px 13px 38px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
