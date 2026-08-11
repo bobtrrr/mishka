@@ -1,0 +1,83 @@
+.button {
+  display: block;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+
+  &[disabled],
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.button--primary {
+  color: $text-color-primary;
+
+  background-color: $bg-color-accent;
+
+  outline: 2px solid $border-color-base;
+
+  &:hover,
+  &:focus-visible {
+    color: $text-color-accent;
+
+    background-color: $bg-color-dark;
+  }
+
+  &:active {
+    color: rgba($text-color-accent, 0.3);
+  }
+}
+
+.button--secondary {
+  color: $text-color-accent;
+
+  background-color: $bg-color-special;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $bg-color-special-2;
+  }
+
+  &:active {
+    color: rgba($text-color-accent, 0.3);
+  }
+}
+
+.button--size-m {
+  padding: 16px 20px;
+
+  font-size: 18px;
+  line-height: 111%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 118%;
+  }
+}
+
+.button--size-m-extra {
+  padding: 18px 20px;
+
+  font-size: 18px;
+  line-height: 89%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 94%;
+  }
+}
+
+.button--size-s {
+  padding: 18px 20px;
+
+  font-size: 17px;
+  line-height: 94%;
+}
