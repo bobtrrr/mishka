@@ -172,6 +172,49 @@
           <a class="reviews__button button button--primary button--size-m" href="#" aria-label="Написать отзыв">Написать</a>
         </div>
       </section>
+
+      <section class="contacts">
+        <div class="contacts__content-wrapper">
+          <h2 class="contacts__title">Контакты</h2>
+
+          <address class="contacts__address">
+            <p class="contacts__text">
+              <span class="contacts__label">e-mail:</span>
+              <a class="contacts__link link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </p>
+
+            <p class="contacts__text">
+              <span class="contacts__label">адрес:</span>
+              <span class="contacts__street">
+                г. Санкт-Петербург ул. <br>
+                Большая Конюшенная <br>
+                д. 19/8, офис 101
+              </span>
+            </p>
+          </address>
+        </div>
+
+        <div class="contacts__map">
+          <picture class="contacts__image-container">
+            <!-- desktop -->
+            <source media="(min-width: 1110px)" srcset="./images/map-desktop@1x.webp 1x, ./images/map-desktop@2x.webp 2x" width="527" height="457" type="image/webp">
+            <source media="(min-width: 1110px)" srcset="./images/map-desktop@1x.png 1x, ./images/map-desktop@2x.png 2x" width="527" height="457" type="image/png">
+
+            <!-- tablet -->
+            <source media="(min-width: 728px)" srcset="./images/map-tablet@1x.webp 1x, ./images/map-tablet@2x.webp 2x" width="768" height="457" type="image/webp">
+            <source media="(min-width: 728px)" srcset="./images/map-tablet@1x.png 1x, ./images/map-tablet@2x.png 2x" width="768" height="457" type="image/png">
+
+            <!-- mobile -->
+            <source srcset="./images/map-mobile@1x.webp 1x, ./images/map-mobile@2x.webp 2x" width="320" height="454" type="image/webp">
+            <img class="contacts__image" src="./images/map-mobile@1x.png" srcset="./images/map-mobile@2x.png 2x" width="320" height="454" alt="г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+          </picture>
+        </div>
+
+        <div class="contacts__button-wrapper">
+          <a class="contacts__button button button--primary button--size-m" href="#">НАпишите нам</a>
+        </div>
+
+      </section>
     </main>
   </div>
 
