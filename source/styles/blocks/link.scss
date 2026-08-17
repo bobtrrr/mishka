@@ -1,0 +1,23 @@
+.link {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  text-decoration-color: $link-border-color;
+  text-underline-offset: 3px;
+  cursor: pointer;
+
+  word-break: break-all;
+
+  &:hover,
+  &:focus-visible {
+    color: $text-color-special;
+
+    text-decoration-color: $link-border-color-hover;
+  }
+
+  &:active {
+    text-decoration-color: rgba($link-border-color-hover, 0.1);
+  }
+}
