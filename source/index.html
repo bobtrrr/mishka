@@ -108,6 +108,54 @@
         </div>
       </section>
 
+      <section class="product-card">
+        <div class="product-card__content container">
+          <header class="product-card__headline">
+            <h2 class="product-card__title" id="product-card-title">Вязаные корзинки</h2>
+            <p class="product-card__chevron">ТОВАР НЕДЕЛИ</p>
+          </header>
+
+          <p class="product-card__description">
+            Экологически чистая пряжа,
+            ручная работа. Доступны в шести расцветках и трёх размерах.
+          </p>
+
+          <dl class="product-card__capacity-params">
+            <div class="product-card__capacity-params-item">
+              <dt class="product-card__capacity-params-name">Цвет:</dt>
+              <dd class="product-card__capacity-params-value">«Тиффани»/серый</dd>
+            </div>
+            <div class="product-card__capacity-params-item">
+              <dt class="product-card__capacity-params-name">Диаметр:</dt>
+              <dd class="product-card__capacity-params-value">25 см</dd>
+            </div>
+            <div class="product-card__capacity-params-item">
+              <dt class="product-card__capacity-params-name">Высота:</dt>
+              <dd class="product-card__capacity-params-value">15 см</dd>
+            </div>
+          </dl>
+
+          <picture class="product-card__image-container">
+            <!-- desktop -->
+            <source media="(min-width: 1110px)" srcset="./images/product-card-desktop@1x.webp 1x, ./images/product-card-desktop@2x.webp 2x" type="image/webp" width="525" height="636">
+            <source media="(min-width: 1110px)" srcset="./images/product-card-desktop@1x.jpg 1x, ./images/product-card-desktop@2x.jpg 2x" type="image/jpg" width="525" height="636">
+
+            <!-- tablet -->
+            <source media="(min-width: 728px)" srcset="./images/product-card-tablet@1x.webp 1x, ./images/product-card-tablet@2x.webp 2x" type="image/webp" width="334" height="404">
+            <source media="(min-width: 728px)" srcset="./images/product-card-tablet@1x.jpg 1x, ./images/product-card-tablet@2x.jpg 2x" type="image/jpg" width="334" height="404">
+
+            <!-- mobile -->
+            <source srcset="./images/product-card-mobile@1x.webp 1x, ./images/product-card-mobile@2x.webp 2x" type="image/webp">
+            <img class="product-card__image" src="./images/product-card-mobile@1x.jpg" srcset="./images/product-card-mobile@2x.jpg 2x" alt="" width="260" height="315" aria-describedby="product-card-title">
+          </picture>
+
+          <p class="product-card__price">Цена: 990 руб.</p>
+
+          <button class="product-card__button button button--primary button--size-m" type="button">Заказать</button>
+        </div>
+
+      </section>
+
       <section class="about container">
         <h2 class="about__title">Коротко о нас:</h2>
 
