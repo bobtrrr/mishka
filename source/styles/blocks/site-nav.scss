@@ -16,29 +16,6 @@
 }
 
 .site-nav__item {
-  @media (max-width: $mobile-width-only) {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-
-      width: 100vw;
-      height: 1px;
-
-      background-color: #ececec;
-
-      // box-shadow: 100vw 0 0 #ececec;
-      box-shadow:
-        100vw 0 0 #ececec,
-        200vw 0 0 #ececec,
-        -100vw 0 0 #ececec,
-        -200vw 0 0 #ececec;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     flex-shrink: 0;
   }
