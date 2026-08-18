@@ -6,10 +6,10 @@
 
 .review-card__text {
   margin: 0;
-  // margin-bottom: 33px;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet-width) {
-    // margin-bottom: 60px;
+    margin-bottom: 0;
 
     font-size: 17px;
     line-height: 176%;
@@ -17,7 +17,6 @@
 
   @media (min-width: $desktop-width) {
     width: 810px;
-    // margin-bottom: 44px;
   }
 }
 

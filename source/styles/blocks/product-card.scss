@@ -2,14 +2,25 @@
   padding-top: 31px;
   padding-bottom: 36px;
 
+  background-image: url("./../../icons/wave-paggern-mobile.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 16px 6px;
+
   @media (min-width: $tablet-width) {
     padding-top: 40px;
     padding-bottom: 69px;
+
+    background-image: url("./../../icons/wave-patter-tablet.svg");
+    background-size: 38px 17px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 54px;
     padding-bottom: 96px;
+
+    background-image: url("./../../icons/wave-pattern-desktop.svg");
+    background-size: 53px 23px;
   }
 }
 
@@ -157,11 +168,7 @@
 .product-card__image-container {
   display: block;
 
-  width: 260px;
-  height: 315px;
   margin-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media (min-width: $tablet-width) {
     grid-column: -1/-2;
@@ -183,7 +190,7 @@
 
 .product-card__image {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 
   object-fit: contain;
