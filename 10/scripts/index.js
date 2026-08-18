@@ -1,1 +1,0 @@
-var e=document.querySelector(".main-nav__button"),n=document.querySelector(".main-nav");e.addEventListener("click",()=>{n.classList.toggle("main-nav--opened"),e.classList.toggle("toggle-button--opened")});
