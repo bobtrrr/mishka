@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
   <script src="scripts/slider.js" defer></script>
+  <script src="scripts/modal.js" defer></script>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=17fad1a8-510c-43ff-9aba-42f5842ea754&lang=ru_RU" defer></script>
   <script src="scripts/map.js" defer></script>
@@ -310,6 +311,40 @@
       </a>
     </div>
   </footer>
+
+  <section class="page__modal modal" tabindex="-1">
+    <div class="modal__overlay">
+      <div class="modal__content">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+
+        <form class="size-form" action="#" method="post">
+          <fieldset class="size-form__fieldset">
+            <legend class="visually-hidden">Размер:</legend>
+
+            <div class="size-form__filter-group">
+              <div class="size-filter">
+                <input class="size-filter__input visually-hidden" type="radio" name="filter-size" value="s" id="filter-size-s" checked>
+                <label class="size-filter__label" for="filter-size-s">s</label>
+              </div>
+
+              <div class="size-filter">
+                <input class="size-filter__input visually-hidden" type="radio" name="filter-size" value="m" id="filter-size-m">
+                <label class="size-filter__label" for="filter-size-m">m</label>
+              </div>
+
+              <div class="size-filter">
+                <input class="size-filter__input visually-hidden" type="radio" name="filter-size" value="l" id="filter-size-l">
+                <label class="size-filter__label" for="filter-size-l">l</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="size-form__button button button--secondary button--size-s" type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

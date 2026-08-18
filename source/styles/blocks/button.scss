@@ -24,8 +24,7 @@
 
   outline: 2px solid $border-color-base;
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     color: $text-color-accent;
 
     background-color: $bg-color-dark;
@@ -41,8 +40,7 @@
 
   background-color: $bg-color-special;
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     background-color: $bg-color-special-2;
   }
 

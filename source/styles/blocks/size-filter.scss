@@ -1,0 +1,33 @@
+.size-filter__input {
+  appearance: none;
+}
+
+.size-filter__input:checked + .size-filter__label {
+  outline-color: $border-color-special;
+}
+
+.size-filter__input:focus-visible + .size-filter__label {
+  outline-color: $border-color-base;
+}
+
+.size-filter__label {
+  display: block;
+  padding: 18px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 94%;
+  text-align: center;
+  text-transform: uppercase;
+
+  outline: 2px solid rgba($border-color-base, 0.1);
+  cursor: pointer;
+
+  &:hover {
+    outline-color: rgba($border-color-base, 0.3);
+  }
+
+  &:active {
+    outline-color: $border-color-special;
+  }
+}
