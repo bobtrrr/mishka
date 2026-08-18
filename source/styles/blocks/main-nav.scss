@@ -98,6 +98,11 @@
 .main-nav--nojs .main-nav__menu {
   @media (max-width: $mobile-width-only) {
     position: static;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0%);
   }
 }
 
