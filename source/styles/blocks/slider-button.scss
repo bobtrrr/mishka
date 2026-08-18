@@ -17,6 +17,12 @@
     opacity: 0.3;
   }
 
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+    cursor: default;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0;
   }

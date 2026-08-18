@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
+  <script src="scripts/slider.js" defer></script>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=17fad1a8-510c-43ff-9aba-42f5842ea754&lang=ru_RU" defer></script>
   <script src="scripts/map.js" defer></script>
@@ -178,7 +179,7 @@
           <h2 class="reviews__title">Отзывы</h2>
 
           <ul class="reviews__list">
-            <li class="reviews__item review-card">
+            <li class="reviews__item reviews__item--active review-card">
               <p class="review-card__text">
                 Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
                 у популярных инстамамочек.
@@ -189,25 +190,25 @@
               <p class="review-card__author">Анастасия Красильникова <span class="review-card__username">@misssssiskras</span></p>
             </li>
 
-            <!-- <li class="reviews__item review-card">
-                <p class="review-card__text">
-                  Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-                </p>
+            <li class="reviews__item review-card">
+              <p class="review-card__text">
+                Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+              </p>
 
-                <p class="review-card__author">Екатерина Красильникова <span class="review-card__username">@misssssiskras2</span></p>
-              </li>
+              <p class="review-card__author">Петруха Иванов <span class="review-card__username">@chickenpetrrr</span></p>
+            </li>
 
-              <li class="reviews__item review-card">
-                <p class="review-card__text">
-                  Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-                </p>
+            <li class="reviews__item review-card">
+              <p class="review-card__text">
+                Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+              </p>
 
-                <p class="review-card__author">Елена Красильникова <span class="review-card__username">@misssssiskras3</span></p>
-              </li> -->
+              <p class="review-card__author">Тарелочница <span class="review-card__username">@lovereat</span></p>
+            </li>
           </ul>
 
           <div class="reviews__buttons-wrapper">
-            <button class="reviews__button-prev slider-button" type="button">
+            <button class="reviews__button-prev slider-button" type="button" disabled>
               <span class="visually-hidden">Предыдущий слайд</span>
               <svg width="50" height="26">
                 <use href="./icons/stack.svg#icon-arrow"></use>
