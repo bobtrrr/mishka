@@ -21,6 +21,9 @@
 }
 
 .page__header {
+  position: relative;
+  z-index: 10;
+
   grid-area: header;
 }
 

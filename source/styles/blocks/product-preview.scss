@@ -1,0 +1,143 @@
+
+.product-preview {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "content";
+
+  @media (min-width: $tablet-width) {
+    grid-template: "image content" minmax(334px, 1fr) / minmax(334px, 1fr) 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template: "image" 462px "content" auto / 1fr;
+  }
+}
+
+.product-preview__content {
+  grid-area: content;
+
+  display: grid;
+  grid-template: "title title" max-content "desc  desc" 1fr "line  line" max-content "price button" max-content / 1fr 20px;
+  column-gap: 80px;
+
+  padding: 27px 28px 26px;
+
+  outline: 1px solid #ececec;
+  outline-offset: -1px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 34px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 28px;
+    padding-right: 31px;
+  }
+}
+
+.product-preview__image-link {
+  grid-area: image;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product-preview__image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.product-preview__title-link {
+  grid-area: title;
+
+  margin-bottom: 6px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product-preview__title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 141%;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+
+.product-preview__description {
+  grid-area: desc;
+
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-size: 13px;
+  line-height: 231%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 200%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 38px;
+  }
+}
+
+.product-preview__split-line {
+  grid-area: line;
+
+  display: block;
+  height: 1px;
+  margin-bottom: 23px;
+
+  background-color: #ececec;
+}
+
+.product-preview__price {
+  grid-area: price;
+
+  margin: 0;
+
+  font-weight: 700;
+  line-height: 160%;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    line-height: 141%;
+  }
+}
+
+.product-preview__button {
+  align-self: end;
+
+  grid-area: button;
+}
