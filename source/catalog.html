@@ -7,10 +7,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
-  <script src="scripts/slider.js" defer></script>
-
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=17fad1a8-510c-43ff-9aba-42f5842ea754&lang=ru_RU" defer></script>
-  <script src="scripts/map.js" defer></script>
 </head>
 
 <body class="page__body page__layout">
@@ -106,7 +102,7 @@
                 <source media="(min-width: 728px)" srcset="./images/catalog-tablet-1@1x.jpg 1x, ./images/catalog-tablet-1@2x.jpg 2x" width="334" height="334" type="image/jpg">
 
                 <!-- mobile -->
-                <source srcset="./images/catalog-1@1x.webp 1, ./images/catalog-mobile-1@2x.webp 2x" type="image/webp">
+                <source srcset="./images/catalog-1@1x.webp 1x, ./images/catalog-mobile-1@2x.webp 2x" type="image/webp">
                 <img class="product-preview__image" src="./images/catalog-mobile-1@1x.jpg" srcset="./images/catalog-mobile-1@2x.jpg 2x" width="260" height="195" alt="#">
               </picture>
             </a>
@@ -125,11 +121,11 @@
               <button class="product-preview__button icon-button" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
 
-                <div class="icon-button__icon-container">
+                <span class="icon-button__icon-container">
                   <svg width="21" height="18">
                     <use href="./icons/stack.svg#icon-cart"></use>
                   </svg>
-                </div>
+                </span>
               </button>
             </div>
           </li>
@@ -164,11 +160,11 @@
 
               <button class="product-preview__button icon-button" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
-                <div class="icon-button__icon-container">
+                <span class="icon-button__icon-container">
                   <svg width="21" height="18">
                     <use href="./icons/stack.svg#icon-cart"></use>
                   </svg>
-                </div>
+                </span>
               </button>
             </div>
           </li>
@@ -203,15 +199,40 @@
 
               <button class="product-preview__button icon-button" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
-                <div class="icon-button__icon-container">
+                <span class="icon-button__icon-container">
                   <svg width="21" height="18">
                     <use href="./icons/stack.svg#icon-cart"></use>
                   </svg>
-                </div>
+                </span>
               </button>
             </div>
           </li>
 
+          <li class="catalog__item catalog__item--wide product-overview">
+            <div class="product-overview__video-player">
+              <picture class="product-overview__image-container">
+                <!-- desktop -->
+                <source media="(min-width: 1110px)" srcset="./images/catalog-tablet-4@1x.webp 1x, ./images/catalog-tablet-4@2x.webp 2x" width="682" height="455" type="image/webp">
+                <source media="(min-width: 1110px)" srcset="./images/catalog-tablet-4@1x.png 1x, ./images/catalog-tablet-4@2x.png 2x" width="682" height="455" type="image/png">
+
+                <!-- tablet -->
+                <source media="(min-width: 728px)" srcset="./images/catalog-tablet-4@1x.webp 1x, ./images/catalog-tablet-4@2x.webp 2x" width="668" height="455" type="image/webp">
+                <source media="(min-width: 728px)" srcset="./images/catalog-tablet-4@1x.png 1x, ./images/catalog-tablet-4@2x.png 2x" width="668" height="455" type="image/png">
+
+                <!-- mobile -->
+                <source srcset="./images/catalog-mobile-4@1x.webp 1x, ./images/catalog-mobile-4@2x.webp 2x" type="image/webp">
+                <img class="product-overview__image" src="./images/catalog-mobile-4@1x.png" srcset="./images/catalog-mobile-4@2x.png 2x" width="260" height="150" alt="">
+              </picture>
+            </div>
+
+            <h3 class="product-overview__title">Процесс производства</h3>
+
+            <p class="product-overview__description">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+            </p>
+
+            <button class="product-overview__button button button--primary button--size-m-extra" type="button">СДелать заказ</button>
+          </li>
         </ul>
       </section>
     </main>

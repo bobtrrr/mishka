@@ -7,11 +7,16 @@
     "content";
 
   @media (min-width: $tablet-width) {
-    grid-template: "image content" minmax(334px, 1fr) / minmax(334px, 1fr) 1fr;
+    grid-template:
+      "image content" minmax(334px, 1fr)
+      / minmax(334px, 1fr) 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template: "image" 462px "content" auto / 1fr;
+    grid-template:
+      "image" 462px
+      "content" auto
+      / 1fr;
   }
 }
 
@@ -19,7 +24,13 @@
   grid-area: content;
 
   display: grid;
-  grid-template: "title title" max-content "desc  desc" 1fr "line  line" max-content "price button" max-content / 1fr 20px;
+  grid-template:
+    "title title" max-content
+    "desc  desc" 1fr
+    "line  line" max-content
+    "price button" max-content
+    / 1fr 20px;
+
   column-gap: 80px;
 
   padding: 27px 28px 26px;
