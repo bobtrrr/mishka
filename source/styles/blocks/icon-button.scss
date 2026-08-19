@@ -1,0 +1,32 @@
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  fill: $icon-bg-color;
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:hover {
+    fill: $icon-bg-color-hover;
+  }
+
+  &:active {
+    fill: rgba($icon-bg-color-hover, 0.3);
+  }
+}
+
+.icon-button__icon-container {
+  flex-shrink: 0;
+
+  width: 21px;
+  height: 18px;
+}
