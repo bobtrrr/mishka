@@ -30,7 +30,6 @@
 }
 
 .page__content-wrapper {
-  // position: relative;
   grid-area: content;
 }
 
@@ -41,5 +40,15 @@
 .page__hero {
   @media (min-width: $tablet-width) {
     margin-top: -48px;
+  }
+}
+
+.page__headline {
+  @media (min-width: $tablet-width) {
+    margin-top: -47.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -43.5px;
   }
 }

@@ -47,8 +47,7 @@
 .main-nav__menu {
   @media (max-width: $mobile-width-only) {
     position: absolute;
-    // top: 89px;
-    top: -1000px;
+    top: -100%;
     left: 0;
     right: 0;
     z-index: 1;
@@ -56,9 +55,7 @@
     visibility: hidden;
     opacity: 0;
 
-    transform: translateY(-100%);
     transition:
-      transform 0.3s ease,
       opacity 0.3s ease,
       visibility 0.3s ease,
       top 0.3s ease;
@@ -92,9 +89,7 @@
 
     top: 89px;
 
-    transform: translateY(0%);
     transition:
-      transform 0.2s ease,
       opacity 0.2s ease,
       visibility 0.2s ease,
       top 0.2s ease;
