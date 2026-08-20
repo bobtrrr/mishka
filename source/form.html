@@ -95,22 +95,22 @@
         </p>
 
         <form class="order__form checkout-form" action="https://echo.htmlacademy.ru">
-          <fieldset class="checkout-form__fieldset form-fieldset">
+          <fieldset class="checkout-form__fieldset checkout-form__fieldset-type form-fieldset">
             <legend class="form-fieldset__legend">ТИП</legend>
 
             <div class="form-fieldset__radio-group">
               <div class="radio-control">
-                <input class="radio-control__input visually-hidden" type="radio" name="type-item" value="accessories-for-interior" id="accessories-for-interior">
+                <input class="radio-control__input visually-hidden" type="radio" name="type-item" value="accessories-for-interior" id="accessories-for-interior" checked>
                 <label class="radio-control__label" for="accessories-for-interior">Аксессуар для интерьера</label>
               </div>
               <div class="radio-control">
-                <input class="radio-control__input visually-hidden" type="radio" name="type-item" value="toy-for-children" id="toy-for-children" disabled>
+                <input class="radio-control__input visually-hidden" type="radio" name="type-item" value="toy-for-children" id="toy-for-children">
                 <label class="radio-control__label" for="toy-for-children">Детская игрушка</label>
               </div>
             </div>
           </fieldset>
 
-          <fieldset class="checkout-form__fieldset form-fieldset">
+          <fieldset class="checkout-form__fieldset checkout-form__fieldset-color form-fieldset">
             <legend class="form-fieldset__legend">ЦВет</legend>
 
             <div class="form-fieldset__checkbox-group">
@@ -146,10 +146,10 @@
             </div>
           </fieldset>
 
-          <fieldset class="checkout-form__fieldset form-fieldset">
-            <legend class="form-fieldset__legened">ФИО</legend>
+          <fieldset class="checkout-form__fieldset checkout-form__fieldset-fullname form-fieldset">
+            <legend class="form-fieldset__legend">ФИО</legend>
 
-            <div class="form-fieldset__group">
+            <div class="form-fieldset__group-full-name">
               <div class="field">
                 <label class="field__label" for="first-user-name-field">Имя:</label>
                 <input class="field__control input" type="text" name="first-user-name" placeholder="Введите ваше имя*" id="first-user-name-field">
@@ -167,24 +167,24 @@
             </div>
           </fieldset>
 
-          <fieldset class="checkout-form__fieldset form-fieldset">
+          <fieldset class="checkout-form__fieldset checkout-form__fieldset-contacts form-fieldset">
             <legend class="visually-hidden">Данные для связи:</legend>
 
-            <div class="form-fieldset__group">
+            <div class="form-fieldset__group-contacts">
               <div class="field field--icon-phone">
-                <label class="field__label" for="phone-field">тел</label>
-                <input class="field__control input" type="tel" name="first-user-name" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="phone-field">
+                <label class="field__label field__label--designed" for="phone-field">тел</label>
+                <input class="field__control input input--extended-space-right" type="tel" name="first-user-name" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="phone-field" disabled>
               </div>
 
               <div class="field field--icon-email">
-                <label class="field__label" for="email-field">E-mail</label>
-                <input class="field__control input" type="email" name="user-email" placeholder="Ваш Email*" id="email-field">
+                <label class="field__label field__label--designed" for="email-field">E-mail</label>
+                <input class="field__control input input--extended-space-right" type="email" name="user-email" placeholder="Ваш Email*" id="email-field">
               </div>
             </div>
           </fieldset>
 
-          <fieldset class="checkout-form__fieldset form-fieldset">
-            <legend class="form-fieldset">
+          <fieldset class="checkout-form__fieldset checkout-form__fieldset-comment form-fieldset">
+            <legend class="form-fieldset__legend">
               Доп <span class="visually-hidden">комментарий</span>
             </legend>
 

@@ -18,7 +18,7 @@
 .checkbox-control__label {
   display: flex;
   align-items: center;
-  column-gap: 19px;
+  column-gap: 23px;
 
   font-weight: 700;
   font-size: 17px;
@@ -52,7 +52,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    column-gap: 26px;
+    column-gap: 30px;
 
     font-size: 19px;
     line-height: 95%;
