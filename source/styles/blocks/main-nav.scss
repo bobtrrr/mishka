@@ -27,6 +27,8 @@
   }
 
   @media (max-width: $mobile-width-only) {
+    z-index: 10;
+
     background-color: $bg-color-accent;
   }
 
@@ -45,7 +47,8 @@
 .main-nav__menu {
   @media (max-width: $mobile-width-only) {
     position: absolute;
-    top: 89px;
+    // top: 89px;
+    top: -1000px;
     left: 0;
     right: 0;
     z-index: 1;
@@ -57,7 +60,8 @@
     transition:
       transform 0.3s ease,
       opacity 0.3s ease,
-      visibility 0.3s ease;
+      visibility 0.3s ease,
+      top 0.3s ease;
   }
 
   @media (min-width: $tablet-width) {
@@ -86,11 +90,14 @@
     visibility: visible;
     opacity: 1;
 
+    top: 89px;
+
     transform: translateY(0%);
     transition:
       transform 0.2s ease,
       opacity 0.2s ease,
-      visibility 0.2s ease;
+      visibility 0.2s ease,
+      top 0.2s ease;
   }
 }
 
