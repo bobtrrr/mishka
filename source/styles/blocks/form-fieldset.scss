@@ -1,0 +1,117 @@
+.form-fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 107px 1fr;
+    column-gap: 60px;
+  }
+}
+
+.form-fieldset__legend {
+  float: left;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 30px;
+  align-items: start;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 94%;
+  text-transform: uppercase;
+  color: $text-color-special-2;
+
+  &::after {
+    content: "";
+
+    height: 1px;
+    width: auto;
+    margin-top: 7px;
+
+    background-color: $border-color-special;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 15px;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.form-fieldset__group-full-name {
+  display: flex;
+  flex-direction: column;
+  row-gap: 21px;
+
+  margin-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 24px;
+
+    margin-top: 0;
+  }
+}
+
+.form-fieldset__group-contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 34px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+
+    row-gap: 24px;
+  }
+}
+
+.form-fieldset__radio-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+
+  margin-top: 31px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 26px;
+
+    margin-top: 0;
+  }
+}
+
+.form-fieldset__checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 23px;
+
+  margin-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.form-fieldset__textarea {
+  width: 100%;
+  height: 142px;
+  margin-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}

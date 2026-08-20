@@ -1,0 +1,28 @@
+.order {
+  padding-top: 17px;
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 54px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 98px;
+  }
+}
+
+.order__description {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 185%;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 174px;
+    margin-right: 171px;
+
+    font-size: 17px;
+    line-height: 176%;
+  }
+}

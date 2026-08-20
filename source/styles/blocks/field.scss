@@ -1,0 +1,156 @@
+.field {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto 1fr;
+    column-gap: 24px;
+    align-items: center;
+  }
+}
+
+.field__label {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 106%;
+  color: $text-color-secondary;
+
+  &--designed {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 30px;
+    align-items: start;
+
+    font-weight: 700;
+    line-height: 94%;
+    text-transform: uppercase;
+    color: $text-color-special-2;
+
+    &::after {
+      content: "";
+
+      height: 1px;
+      width: auto;
+      margin-top: 7px;
+
+      background-color: $border-color-special;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    font-size: 19px;
+    line-height: 95%;
+  }
+}
+
+.field__control {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
+}
+
+.field--icon-email,
+.field--icon-phone {
+  grid-template-columns: 1fr 44px;
+  align-items: center;
+
+  &::after {
+    content: "";
+
+    grid-column: -1/-2;
+    grid-row: 2/3;
+    z-index: 10;
+
+    background-color: $icon-bg-color;
+    mask-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $icon-bg-color-hover;
+    }
+  }
+
+  &:focus-within {
+    &::after {
+      background-color: $icon-bg-color-hover;
+    }
+  }
+
+  &:has(.field__control:disabled) {
+    &::after {
+      background-color: $icon-bg-color;
+    }
+  }
+
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 112px 1fr 74px;
+    column-gap: 60px;
+
+    &::after {
+      grid-column: -1/-2;
+      grid-row: 1/2;
+
+      justify-self: center;
+    }
+  }
+}
+
+.field--icon-email {
+  &::after {
+    content: "";
+
+    width: 32px;
+    height: 21px;
+
+    mask-image: url("./../../icons/icon-email.svg");
+  }
+}
+
+.field--icon-phone {
+  &::after {
+    width: 25px;
+    height: 24px;
+
+    mask-image: url("./../../icons/icon-phone.svg");
+  }
+}
+
+.field--icon--phone .field__label,
+.field--icon--email .field__label {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.field--icon--phone .field__control,
+.field--icon--email .field__control {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
+}

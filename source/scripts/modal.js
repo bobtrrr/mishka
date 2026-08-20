@@ -17,9 +17,6 @@ const closeModal = () => {
   }
 };
 
-// openButton.addEventListener('click', openModal);
-// openButton.addEventListener('click', openModal);
-
 window.addEventListener('click', (evt) => {
   const target = evt.target;
 

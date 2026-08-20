@@ -1,0 +1,39 @@
+.textarea {
+  box-sizing: border-box;
+
+  padding: 17px;
+
+  border: none;
+
+  color: inherit;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 106%;
+
+
+  outline: 2px solid $border-color-base;
+  outline-offset: -2px;
+  resize: vertical;
+  background-color: transparent;
+
+  &:hover,
+  &:focus-visible {
+    outline-color: $border-color-special;
+  }
+
+  &::placeholder {
+    color: rgba($text-color-secondary, 0.3);
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 95%;
+  }
+}
