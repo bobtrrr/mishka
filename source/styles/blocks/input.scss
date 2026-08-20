@@ -1,4 +1,6 @@
 .input {
+  box-sizing: border-box;
+
   display: inline-block;
   padding: 16px 10px 16px 0;
 
@@ -11,6 +13,7 @@
   border: none;
   border-bottom: 2px solid $border-color-base;
   outline: none;
+  background-color: transparent;
 
   &:hover,
   &:focus-visible {
@@ -21,6 +24,12 @@
     color: rgba($text-color-secondary, 0.3);
   }
 
+  &:disabled {
+    pointer-events: none;
+
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 17px;
     padding-left: 18px;
@@ -28,5 +37,13 @@
 
     font-size: 19px;
     line-height: 95%;
+  }
+
+  &--extended-space-right {
+    padding-right: 44px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 74px;
+    }
   }
 }
