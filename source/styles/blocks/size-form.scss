@@ -1,0 +1,16 @@
+.size-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.size-form__fieldset {
+  padding: 0;
+  border: none;
+}
+
+.size-form__filter-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 7px;
+}

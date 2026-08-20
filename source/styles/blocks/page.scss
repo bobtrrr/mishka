@@ -1,4 +1,6 @@
 .page__body {
+  position: relative;
+
   min-width: $mobile-width;
   margin: 0;
   padding: 0;
@@ -28,6 +30,7 @@
 }
 
 .page__content-wrapper {
+  // position: relative;
   grid-area: content;
 }
 
