@@ -17,6 +17,8 @@
   resize: vertical;
   background-color: transparent;
 
+  transition: outline-color 0.3s ease;
+
   &:hover,
   &:focus-visible {
     outline-color: $border-color-special;

@@ -8,6 +8,8 @@
   border: none;
   cursor: pointer;
 
+  transition: opacity 0.3s ease;
+
   &:hover,
   &:focus-visible {
     opacity: 0.6;

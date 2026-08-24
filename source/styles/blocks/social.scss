@@ -19,7 +19,6 @@
 }
 
 .social__link {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +27,8 @@
 
   cursor: pointer;
   fill: var(--icon-fill);
+
+  transition: all 0.3s ease;
 
   &:hover,
   &:focus-visible {

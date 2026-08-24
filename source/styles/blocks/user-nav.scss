@@ -1,6 +1,6 @@
 .user-nav {
-  --icon-fill: #000000;
-  --icon-opacity: 0.2;
+  --icon-fill: rgba(#000000, 0.2);
+  --icon-opacity: 1;
 
   margin: 0;
   padding: 0;
@@ -37,6 +37,11 @@
 .user-nav__icon {
   fill: var(--icon-fill);
   fill-opacity: var(--icon-opacity);
+
+
+  transition:
+    fill 0.3s ease,
+    fill-opacity 0.3s ease;
 }
 
 .user-nav__link {
@@ -56,12 +61,13 @@
   cursor: pointer;
   text-decoration: none;
 
+  transition: color 0.3s ease;
+
   &:hover,
   &:focus-visible {
     color: rgba($text-color-secondary, 0.6);
 
     --icon-fill: #63d1bb;
-    --icon-opacity: 1;
   }
 
   &:active {

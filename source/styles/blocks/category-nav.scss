@@ -26,6 +26,8 @@
   text-decoration: none;
   cursor: pointer;
 
+  transition: color 0.3s ease;
+
   &:hover,
   &:focus-visible {
     color: rgba($text-color-secondary, 0.6);

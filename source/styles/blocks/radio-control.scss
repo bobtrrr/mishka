@@ -38,6 +38,8 @@
     border-radius: 100%;
     outline: 2px solid $border-color-base;
     outline-offset: -2px;
+
+    transition: outline-color 0.3s ease;
   }
 
   &:hover {
