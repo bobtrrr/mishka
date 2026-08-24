@@ -15,6 +15,8 @@
   outline: none;
   background-color: transparent;
 
+  transition: border-color 0.3s ease;
+
   &:hover,
   &:focus-visible {
     border-color: $border-color-special;

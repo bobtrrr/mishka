@@ -98,29 +98,17 @@
 }
 
 .reviews__title {
-  margin: 0;
   margin-bottom: 14px;
-
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 120%;
-  color: $text-color-secondary;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
     grid-row: 1/2;
 
     margin-bottom: 0;
-
-    font-size: 43px;
-    line-height: 116%;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 35px;
-
-    font-size: 53px;
-    line-height: 108%;
   }
 }
 

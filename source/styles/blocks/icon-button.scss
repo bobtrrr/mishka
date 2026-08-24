@@ -11,6 +11,8 @@
 
   fill: $icon-bg-color;
 
+  transition: fill 0.3s ease;
+
   &:disabled {
     pointer-events: none;
   }

@@ -3,9 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Главная страница | Mishka</title>
+  <title>Каталог товаров | Mishka</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- LOGO -->
+  <link rel="preload" media="(min-width: 1110px)" href="./images/logo-desktop.svg" as="image" fetchpriority="high">
+  <link rel="preload" media="(min-width: 728px) and (max-width: 1109px)" href="./images/logo-tablet.svg" as="image" fetchpriority="high">
+  <link rel="preload" media="(max-width: 727px)" href="./images/logo-mobile.svg" as="image" fetchpriority="high">
+
+  <!-- FONTS -->
+  <link rel="preload" href="./fonts/opensans/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <!-- STYLES -->
+  <link rel="preload" href="./styles/styles.scss" as="style">
+
+  <!-- SCRIPTS -->
+  <link rel="preload" href="./scripts/index.js" as="script">
+
+  <!-- ICONS -->
+  <link rel="icon" href="./favicon.ico" sizes="48x48 32x32 16x16">
+  <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+
   <link rel="stylesheet" href="styles/styles.css">
+
   <script src="scripts/index.js" defer></script>
   <script src="scripts/modal.js" defer></script>
 
@@ -14,9 +37,9 @@
 <body class="page__body page__layout">
   <header class="page__header page-header">
     <div class="container">
-      <nav class="page-header__main-nav main-nav main-nav--nojs">
+      <nav class="page-header__main-nav main-nav main-nav--nojs" aria-label="Гланое меню">
         <div class="main-nav__top">
-          <a class="main-nav__logo logo" href="#" aria-label="Логотип Mishka">
+          <a class="main-nav__logo logo" href="index.html" aria-label="Главная страница | Mishka">
             <picture>
               <source media="(min-width: 1110px)" srcset="./images/logo-desktop.svg" width="149" height="72" type="image/svg+xml">
               <source media="(min-width: 728px)" srcset="./images/logo-tablet.svg" width="114" height="46" type="image/svg+xml">
@@ -24,7 +47,7 @@
             </picture>
           </a>
 
-          <button class="main-nav__button toggle-button" type="button" aria-label="Открыть меню">
+          <button class="main-nav__button toggle-button" type="button" aria-label="Открыть меню" aria-controls="main-menu" aria-expanded="true">
             <span class="toggle-button__line"></span>
             <span class="toggle-button__line"></span>
             <span class="toggle-button__line"></span>
@@ -32,21 +55,21 @@
           </button>
         </div>
 
-        <div class="main-nav__menu">
-          <ul class="main-nav__site-nav site-nav main-nav__menu-list">
+        <div class="main-nav__menu" id="main-menu">
+          <ul class="main-nav__site-nav site-nav main-nav__menu-list" aria-label="Основыне разделы сайта">
             <li class="site-nav__item main-nav__menu-item">
-              <a class="site-nav__link" href="#">Каталог товаров</a>
+              <a class="site-nav__link" href="#" aria-current="page">Каталог товаров</a>
             </li>
             <li class="site-nav__item main-nav__menu-item">
-              <a class="site-nav__link" href="#">Вязание на заказ</a>
+              <a class="site-nav__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
 
-          <ul class="main-nav__user-nav user-nav main-nav__menu-list">
+          <ul class="main-nav__user-nav user-nav main-nav__menu-list" aria-label="Меню пользователя">
             <li class="user-nav__item main-nav__menu-item">
               <a class="user-nav__link user-nav__link--search" href="#">
                 <div class="user-nav__icon-container">
-                  <svg class="user-nav__icon" width="18" height="18">
+                  <svg class="user-nav__icon" aria-hidden="true" width="18" height="18">
                     <use href="./icons/stack.svg#icon-search" />
                   </svg>
                 </div>
@@ -56,7 +79,7 @@
             <li class="user-nav__item main-nav__menu-item">
               <a class="user-nav__link" href="#">
                 <div class="user-nav__icon-container">
-                  <svg class="user-nav__icon" width="21" height="18">
+                  <svg class="user-nav__icon" aria-hidden="true" width="21" height="18">
                     <use href="./icons/stack.svg#icon-cart" />
                   </svg>
                 </div>
@@ -105,7 +128,7 @@
 
                 <!-- mobile -->
                 <source srcset="./images/catalog-1@1x.webp 1x, ./images/catalog-mobile-1@2x.webp 2x" type="image/webp">
-                <img class="product-preview__image" src="./images/catalog-mobile-1@1x.jpg" srcset="./images/catalog-mobile-1@2x.jpg 2x" width="260" height="195" alt="#">
+                <img class="product-preview__image" src="./images/catalog-mobile-1@1x.jpg" srcset="./images/catalog-mobile-1@2x.jpg 2x" width="260" height="195" alt="#" fetchpriority="high">
               </picture>
             </a>
 
@@ -124,7 +147,7 @@
                 <span class="visually-hidden">Добавить в корзину</span>
 
                 <span class="icon-button__icon-container">
-                  <svg width="21" height="18">
+                  <svg width="21" height="18" aria-hidden="true">
                     <use href="./icons/stack.svg#icon-cart"></use>
                   </svg>
                 </span>
@@ -145,7 +168,7 @@
 
                 <!-- mobile -->
                 <source srcset="./images/catalog-2@1x.webp 1x, ./images/catalog-mobile-2@2x.webp 2x" type="image/webp">
-                <img class="product-preview__image" src="./images/catalog-mobile-2@1x.jpg" srcset="./images/catalog-mobile-2@2x.jpg 2x" width="260" height="195" alt="#">
+                <img class="product-preview__image" src="./images/catalog-mobile-2@1x.jpg" srcset="./images/catalog-mobile-2@2x.jpg 2x" width="260" height="195" alt="#" fetchpriority="high">
               </picture>
             </a>
 
@@ -163,7 +186,7 @@
               <button class="product-preview__button icon-button js-open-modal" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <span class="icon-button__icon-container">
-                  <svg width="21" height="18">
+                  <svg width="21" height="18" aria-hidden="true">
                     <use href="./icons/stack.svg#icon-cart"></use>
                   </svg>
                 </span>
@@ -184,7 +207,7 @@
 
                 <!-- mobile -->
                 <source srcset="./images/catalog-3@1x.webp 1x, ./images/catalog-mobile-3@2x.webp 2x" type="image/webp">
-                <img class="product-preview__image" src="./images/catalog-mobile-3@1x.jpg" srcset="./images/catalog-mobile-3@2x.jpg 2x" width="260" height="195" alt="#">
+                <img class="product-preview__image" src="./images/catalog-mobile-3@1x.jpg" srcset="./images/catalog-mobile-3@2x.jpg 2x" width="260" height="195" alt="#" fetchpriority="high">
               </picture>
             </a>
 
@@ -202,7 +225,7 @@
               <button class="product-preview__button icon-button js-open-modal" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <span class="icon-button__icon-container">
-                  <svg width="21" height="18">
+                  <svg width="21" height="18" aria-hidden="true">
                     <use href="./icons/stack.svg#icon-cart"></use>
                   </svg>
                 </span>
@@ -223,7 +246,7 @@
 
                 <!-- mobile -->
                 <source srcset="./images/catalog-mobile-4@1x.webp 1x, ./images/catalog-mobile-4@2x.webp 2x" type="image/webp">
-                <img class="product-overview__image" src="./images/catalog-mobile-4@1x.png" srcset="./images/catalog-mobile-4@2x.png 2x" width="260" height="150" alt="">
+                <img class="product-overview__image" src="./images/catalog-mobile-4@1x.png" srcset="./images/catalog-mobile-4@2x.png 2x" width="260" height="150" alt="" fetchpriority="high">
               </picture>
             </div>
 
@@ -243,7 +266,7 @@
   <footer class="page__footer page-footer">
     <div class="page-footer__content-wrapper container">
       <a class="page-footer__logo logo-secondary" href="#" aria-label="Главная страница | Mishka">
-        <svg width="102" height="34">
+        <svg width="102" height="34" aria-hidden="true">
           <use href="./icons/stack.svg#logo-footer"></use>
         </svg>
       </a>
@@ -251,19 +274,19 @@
       <ul class="page-footer__social social">
         <li class="social__item"><a class="social__link" href="#">
             <span class="visually-hidden">Instagram</span>
-            <svg width="22" height="21">
+            <svg width="22" height="21" aria-hidden="true">
               <use href="./icons/stack.svg#icon-inst"></use>
             </svg>
           </a></li>
         <li class="social__item"><a class="social__link" href="#">
             <span class="visually-hidden">Facebook</span>
-            <svg width="15" height="22">
+            <svg width="15" height="22" aria-hidden="true">
               <use href="./icons/stack.svg#icon-fb"></use>
             </svg>
           </a></li>
         <li class="social__item"><a class="social__link" href="#">
             <span class="visually-hidden">Twitter</span>
-            <svg width="23" height="20">
+            <svg width="23" height="20" aria-hidden="true">
               <use href="./icons/stack.svg#icon-tw"></use>
             </svg>
           </a></li>
@@ -273,7 +296,7 @@
 
       <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн‑курс HTML и CSS. Адаптивная вёрстка и автоматизация">
         <span class="copyright__text">Разработано</span>
-        <svg width="27" height="34">
+        <svg width="27" height="34" aria-hidden="true">
           <use href="./icons/stack.svg#logo-htmlacademy"></use>
         </svg>
       </a>

@@ -5,7 +5,35 @@
   <meta charset="UTF-8">
   <title>Главная страница | Mishka</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- HERO IMG -->
+  <link rel="preload" media="(min-width: 1110px)" imagesrcset="./images/hero-bg-desktop@1x.webp 1x, ./images/hero-bg-desktop@2x.webp 2x" as="image" fetchpriority="high">
+  <link rel="preload" media="(min-width: 728px) and (max-width: 1109px)" imagesrcset="./images/hero-bg-tablet@1x.webp 1x, ./images/hero-bg-tablet@2x.webp 2x" as="image" fetchpriority="high">
+  <link rel="preload" media="(max-width: 727px)" imagesrcset="./images/hero-bg-mobile@1x.webp 1x, ./images/hero-bg-mobile@2x.webp 2x" as="image" fetchpriority="high">
+
+  <!-- LOGO -->
+  <link rel="preload" media="(min-width: 1110px)" href="./images/logo-desktop.svg" as="image" fetchpriority="high">
+  <link rel="preload" media="(min-width: 728px) and (max-width: 1109px)" href="./images/logo-tablet.svg" as="image" fetchpriority="high">
+  <link rel="preload" media="(max-width: 727px)" href="./images/logo-mobile.svg" as="image" fetchpriority="high">
+
+  <!-- FONTS -->
+  <link rel="preload" href="./fonts/opensans/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <!-- STYLES -->
+  <link rel="preload" href="./styles/styles.scss" as="style">
+
+  <!-- SCRIPTS -->
+  <link rel="preload" href="./scripts/index.js" as="script">
+
+  <!-- ICONS -->
+  <link rel="icon" href="./favicon.ico" sizes="48x48 32x32 16x16">
+  <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+
   <link rel="stylesheet" href="styles/styles.css">
+
   <script src="scripts/index.js" defer></script>
   <script src="scripts/slider.js" defer></script>
   <script src="scripts/modal.js" defer></script>
@@ -17,9 +45,9 @@
 <body class="page__body page__layout">
   <header class="page__header page-header">
     <div class="container">
-      <nav class="page-header__main-nav main-nav main-nav--nojs">
+      <nav class="page-header__main-nav main-nav main-nav--nojs" aria-label="Гланое меню">
         <div class="main-nav__top">
-          <a class="main-nav__logo logo" href="#" aria-label="Логотип Mishka">
+          <a class="main-nav__logo logo" href="index.html" aria-label="Главная страница | Mishka">
             <picture>
               <source media="(min-width: 1110px)" srcset="./images/logo-desktop.svg" width="149" height="72" type="image/svg+xml">
               <source media="(min-width: 728px)" srcset="./images/logo-tablet.svg" width="114" height="46" type="image/svg+xml">
@@ -27,7 +55,7 @@
             </picture>
           </a>
 
-          <button class="main-nav__button toggle-button" type="button" aria-label="Открыть меню">
+          <button class="main-nav__button toggle-button" type="button" aria-label="Открыть меню" aria-controls="main-menu" aria-expanded="true">
             <span class="toggle-button__line"></span>
             <span class="toggle-button__line"></span>
             <span class="toggle-button__line"></span>
@@ -35,21 +63,21 @@
           </button>
         </div>
 
-        <div class="main-nav__menu">
-          <ul class="main-nav__site-nav site-nav main-nav__menu-list">
+        <div class="main-nav__menu" id="main-menu">
+          <ul class="main-nav__site-nav site-nav main-nav__menu-list" aria-label="Основыне разделы сайта">
             <li class="site-nav__item main-nav__menu-item">
-              <a class="site-nav__link" href="#">Каталог товаров</a>
+              <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-nav__item main-nav__menu-item">
-              <a class="site-nav__link" href="#">Вязание на заказ</a>
+              <a class="site-nav__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
 
-          <ul class="main-nav__user-nav user-nav main-nav__menu-list">
+          <ul class="main-nav__user-nav user-nav main-nav__menu-list" aria-label="Меню пользователя">
             <li class="user-nav__item main-nav__menu-item">
               <a class="user-nav__link user-nav__link--search" href="#">
                 <div class="user-nav__icon-container">
-                  <svg class="user-nav__icon" width="18" height="18">
+                  <svg class="user-nav__icon" aria-hidden="true" width="18" height="18">
                     <use href="./icons/stack.svg#icon-search" />
                   </svg>
                 </div>
@@ -59,7 +87,7 @@
             <li class="user-nav__item main-nav__menu-item">
               <a class="user-nav__link" href="#">
                 <div class="user-nav__icon-container">
-                  <svg class="user-nav__icon" width="21" height="18">
+                  <svg class="user-nav__icon" aria-hidden="true" width="21" height="18">
                     <use href="./icons/stack.svg#icon-cart" />
                   </svg>
                 </div>
@@ -96,7 +124,7 @@
             <source media="(min-width: 728px)" srcset="./images/hero-bg-tablet@1x.png 1x, ./images/hero-bg-tablet@2x.png 2x" type="image/png" width="748" height="746">
 
             <source srcset="./images/hero-bg-mobile@1x.webp 1x, ./images/hero-bg-mobile@2x.webp 2x" type="image/webp">
-            <img class="hero__image" src="./images/hero-bg@1x.png" width="320" height="373" srcset="./images/hero-bg@2x.png 2x" alt="#">
+            <img class="hero__image" src="./images/hero-bg@1x.png" width="320" height="373" srcset="./images/hero-bg@2x.png 2x" alt="" fetchpriority="high">
           </picture>
 
           <div class="hero__content-wrapper">
@@ -117,7 +145,7 @@
       <section class="product-card">
         <div class="product-card__content container">
           <header class="product-card__headline">
-            <h2 class="product-card__title" id="product-card-title">Вязаные корзинки</h2>
+            <h2 class="product-card__title title" id="product-card-title">Вязаные корзинки</h2>
             <p class="product-card__chevron">ТОВАР НЕДЕЛИ</p>
           </header>
 
@@ -152,7 +180,7 @@
 
             <!-- mobile -->
             <source srcset="./images/product-card-mobile@1x.webp 1x, ./images/product-card-mobile@2x.webp 2x" type="image/webp">
-            <img class="product-card__image" src="./images/product-card-mobile@1x.jpg" srcset="./images/product-card-mobile@2x.jpg 2x" alt="" width="260" height="315" aria-describedby="product-card-title">
+            <img class="product-card__image" src="./images/product-card-mobile@1x.jpg" srcset="./images/product-card-mobile@2x.jpg 2x" alt="" width="260" height="315" loading="lazy">
           </picture>
 
           <p class="product-card__price">Цена: 990 руб.</p>
@@ -163,7 +191,7 @@
       </section>
 
       <section class="about container">
-        <h2 class="about__title">Коротко о нас:</h2>
+        <h2 class="about__title title">Коротко о нас:</h2>
 
         <ul class="about__list">
           <li class="about__item about__item--eco">Экологически<br> чистые материалы</li>
@@ -175,49 +203,55 @@
         </ul>
       </section>
 
-      <section class="reviews">
+      <section class="reviews" aria-roledescription="Карусель" aria-labelledby="reviews-title">
         <div class="reviews__content-wrapper container">
-          <h2 class="reviews__title">Отзывы</h2>
+          <h2 class="reviews__title title" id="reviews-title">Отзывы</h2>
 
-          <ul class="reviews__list">
+          <ul class="reviews__list" id="slider-list">
             <li class="reviews__item reviews__item--active review-card">
-              <p class="review-card__text">
-                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
-                у популярных инстамамочек.
-                В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-                и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
+              <div class="review-card" role="group" aria-roledescription="Слайд" aria-label="1 из 3">
+                <p class="review-card__text">
+                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
+                  у популярных инстамамочек.
+                  В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+                  и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
 
-              <p class="review-card__author">Анастасия Красильникова <span class="review-card__username">@misssssiskras</span></p>
+                <p class="review-card__author">Анастасия Красильникова <span class="review-card__username">@misssssiskras</span></p>
+              </div>
             </li>
 
             <li class="reviews__item review-card">
-              <p class="review-card__text">
-                Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
+              <div class="review-card" role="group" aria-roledescription="Слайд" aria-label="2 из 3">
+                <p class="review-card__text">
+                  Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
 
-              <p class="review-card__author">Петруха Иванов <span class="review-card__username">@chickenpetrrr</span></p>
+                <p class="review-card__author">Петруха Иванов <span class="review-card__username">@chickenpetrrr</span></p>
+              </div>
             </li>
 
             <li class="reviews__item review-card">
-              <p class="review-card__text">
-                Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
+              <div class="review-card" role="group" aria-roledescription="Слайд" aria-label="3 из 3">
+                <p class="review-card__text">
+                  Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
 
-              <p class="review-card__author">Тарелочница <span class="review-card__username">@lovereat</span></p>
+                <p class="review-card__author">Тарелочница <span class="review-card__username">@lovereat</span></p>
+              </div>
             </li>
           </ul>
 
           <div class="reviews__buttons-wrapper">
-            <button class="reviews__button-prev slider-button" type="button" disabled>
+            <button class="reviews__button-prev slider-button" type="button" disabled aria-controls="slider-list">
               <span class="visually-hidden">Предыдущий слайд</span>
-              <svg width="50" height="26">
+              <svg width="50" aria-hidden="true" height="26">
                 <use href="./icons/stack.svg#icon-arrow"></use>
               </svg>
             </button>
-            <button class="reviews__button-next slider-button" type="button">
+            <button class="reviews__button-next slider-button" type="button" aria-controls="slider-list">
               <span class="visually-hidden">Следующий слайд</span>
-              <svg width="50" height="26">
+              <svg width="50" aria-hidden="true" height="26">
                 <use href="./icons/stack.svg#icon-arrow"></use>
               </svg>
             </button>
@@ -229,12 +263,12 @@
 
       <section class="contacts">
         <div class="contacts__content-wrapper">
-          <h2 class="contacts__title">Контакты</h2>
+          <h2 class="contacts__title title">Контакты</h2>
 
           <address class="contacts__address">
             <p class="contacts__text">
               <span class="contacts__label">e-mail:</span>
-              <a class="contacts__link link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              <a class="contacts__link link" href="mailto:info@mimimishkashop.ru" aria-label="Наша почта для связи info@mimimishkashop.ru">info@mimimishkashop.ru</a>
             </p>
 
             <p class="contacts__text">
@@ -260,7 +294,7 @@
 
             <!-- mobile -->
             <source srcset="./images/map-mobile@1x.webp 1x, ./images/map-mobile@2x.webp 2x" width="320" height="454" type="image/webp">
-            <img class="contacts__image" src="./images/map-mobile@1x.png" srcset="./images/map-mobile@2x.png 2x" width="320" height="454" alt="г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101">
+            <img class="contacts__image" src="./images/map-mobile@1x.png" srcset="./images/map-mobile@2x.png 2x" width="320" height="454" alt="">
           </picture>
         </div>
 
@@ -275,7 +309,7 @@
   <footer class="page__footer page-footer">
     <div class="page-footer__content-wrapper container">
       <a class="page-footer__logo logo-secondary" href="#" aria-label="Главная страница | Mishka">
-        <svg width="102" height="34">
+        <svg width="102" height="34" aria-hidden="true">
           <use href="./icons/stack.svg#logo-footer"></use>
         </svg>
       </a>
@@ -283,19 +317,19 @@
       <ul class="page-footer__social social">
         <li class="social__item"><a class="social__link" href="#">
             <span class="visually-hidden">Instagram</span>
-            <svg width="22" height="21">
+            <svg aria-hidden="true" width="22" height="21">
               <use href="./icons/stack.svg#icon-inst"></use>
             </svg>
           </a></li>
         <li class="social__item"><a class="social__link" href="#">
             <span class="visually-hidden">Facebook</span>
-            <svg width="15" height="22">
+            <svg aria-hidden="true" width="15" height="22">
               <use href="./icons/stack.svg#icon-fb"></use>
             </svg>
           </a></li>
         <li class="social__item"><a class="social__link" href="#">
             <span class="visually-hidden">Twitter</span>
-            <svg width="23" height="20">
+            <svg aria-hidden="true" width="23" height="20">
               <use href="./icons/stack.svg#icon-tw"></use>
             </svg>
           </a></li>
@@ -305,7 +339,7 @@
 
       <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн‑курс HTML и CSS. Адаптивная вёрстка и автоматизация">
         <span class="copyright__text">Разработано</span>
-        <svg width="27" height="34">
+        <svg width="27" height="34" aria-hidden="true">
           <use href="./icons/stack.svg#logo-htmlacademy"></use>
         </svg>
       </a>

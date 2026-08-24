@@ -7,22 +7,21 @@
     padding-top: 154px;
 
     position: relative;
+    overflow: hidden;
 
     &::after {
       content: "";
 
       position: absolute;
-      bottom: -12px;
-      left: 0;
+      bottom: 0;
 
       width: 100%;
       height: 24px;
 
-      background-color: $bg-color-accent;
-      mask-size: 768px 24px;
-      mask-image: url("./../../icons/zigzag.svg");
-      mask-repeat: repeat-x;
-      mask-position: left 17px top;
+      background-image: url("./../../icons/big-wave-tablet.svg");
+      background-size: 38px 24px;
+      background-position: center bottom;
+      background-repeat: repeat-x;
     }
   }
 
@@ -30,16 +29,23 @@
     padding-top: 158px;
 
     &::after {
-      bottom: -17px;
-
       height: 34px;
 
-      mask-size: 1150px 34px;
-      mask-image: url("./../../icons/zigzag-desktop.svg");
+      background-image: url("./../../icons/big-wave-desktop.svg");
+      background-size: 58px 34px;
     }
   }
 }
 
+.hero__content-wrapper {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 17px;
+  }
+}
 
 .hero__image-wrapper {
   position: absolute;
@@ -48,13 +54,11 @@
   z-index: -1;
 
   width: 100%;
-  // height: 373px;
   height: 100%;
 
   background-color: #f9f9f9;
 
   @media (min-width: $tablet-width) {
-    // height: 746px;
     height: 100%;
   }
 }
@@ -129,6 +133,9 @@
   cursor: pointer;
   text-decoration: none;
 
+
+  transition: opacity 1s ease;
+
   &:hover,
   &:focus-visible {
     --icon-opacity: 0.7;
@@ -164,6 +171,10 @@
 
     width: 100vw;
     height: 100%;
+
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   &::after {
@@ -173,7 +184,10 @@
 
     opacity: var(--icon-opacity);
 
-    transition: top 0.2s ease, height 0.2s ease;
+    transition:
+      top 0.3s ease,
+      height 0.3s ease,
+      opacity 0.3s ease;
   }
 }
 
@@ -207,10 +221,10 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-color: var(--link-bg-color);
-
     &::before {
-      content: none;
+      width: 100%;
+
+      box-shadow: none;
     }
 
     &::after {
@@ -256,10 +270,10 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-color: var(--link-bg-color);
-
     &::before {
-      content: none;
+      width: 100%;
+
+      box-shadow: none;
     }
 
     &::after {

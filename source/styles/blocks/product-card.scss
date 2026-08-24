@@ -27,7 +27,7 @@
 .product-card__content {
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: minmax(292px, 400px) 334px;
+    grid-template-columns: 1fr 334px;
     justify-content: space-between;
     column-gap: 42px;
     align-items: start;
@@ -68,21 +68,12 @@
 }
 
 .product-card__title {
-  margin: 0;
   margin-bottom: 4px;
-
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 120%;
-  color: $text-color-secondary;
 
   @media (min-width: $tablet-width) {
     grid-area: title;
 
     margin-bottom: 0;
-
-    font-size: 43px;
-    line-height: 116%;
   }
 
   @media (min-width: $desktop-width) {

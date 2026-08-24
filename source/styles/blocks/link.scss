@@ -10,6 +10,8 @@
 
   word-break: break-all;
 
+  transition: all 0.3s ease;
+
   &:hover,
   &:focus-visible {
     color: $text-color-special;

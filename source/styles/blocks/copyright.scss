@@ -17,6 +17,8 @@
   fill: var(--icon-fill);
   fill-opacity: var(--icon-opacity);
 
+  transition: all 0.3s ease;
+
   &:hover,
   &:focus-visible {
     --icon-fill: #46c1ae;
