@@ -5,7 +5,29 @@
   <meta charset="UTF-8">
   <title>Главная страница | Mishka</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- HERO IMG -->
+  <link rel="preload" media="(min-width: 1110px)" imagesrcset="./images/hero-bg-desktop@1x.webp 1x, ./images/hero-bg-desktop@2x.webp 2x" as="image" fetchpriority="high">
+  <link rel="preload" media="(min-width: 728px) and (max-width: 1109px)" imagesrcset="./images/hero-bg-tablet@1x.webp 1x, ./images/hero-bg-tablet@2x.webp 2x" as="image" fetchpriority="high">
+  <link rel="preload" media="(max-width: 727px)" imagesrcset="./images/hero-bg-mobile@1x.webp 1x, ./images/hero-bg-mobile@2x.webp 2x" as="image" fetchpriority="high">
+
+  <!-- LOGO -->
+  <link rel="preload" media="(min-width: 1110px)" href="./images/logo-desktop.svg" as="image" fetchpriority="high">
+  <link rel="preload" media="(min-width: 728px) and (max-width: 1109px)" href="./images/logo-tablet.svg" as="image" fetchpriority="high">
+  <link rel="preload" media="(max-width: 727px)" href="./images/logo-mobile.svg" as="image" fetchpriority="high">
+
+  <!-- FONTS -->
+  <link rel="preload" href="./fonts/opensans/opensans.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans/opensansbold.woff2" type="font/woff2" crossorigin="anonymous">
+
+  <!-- STYLES -->
+  <link rel="preload" href="./styles/styles.scss" as="style">
+
+  <!-- SCRIPTS -->
+  <link rel="preload" href="./scripts/index.js">
+
   <link rel="stylesheet" href="styles/styles.css">
+
   <script src="scripts/index.js" defer></script>
   <script src="scripts/slider.js" defer></script>
   <script src="scripts/modal.js" defer></script>
@@ -96,7 +118,7 @@
             <source media="(min-width: 728px)" srcset="./images/hero-bg-tablet@1x.png 1x, ./images/hero-bg-tablet@2x.png 2x" type="image/png" width="748" height="746">
 
             <source srcset="./images/hero-bg-mobile@1x.webp 1x, ./images/hero-bg-mobile@2x.webp 2x" type="image/webp">
-            <img class="hero__image" src="./images/hero-bg@1x.png" width="320" height="373" srcset="./images/hero-bg@2x.png 2x" alt="#">
+            <img class="hero__image" src="./images/hero-bg@1x.png" width="320" height="373" srcset="./images/hero-bg@2x.png 2x" alt="" fetchpriority="high">
           </picture>
 
           <div class="hero__content-wrapper">
@@ -152,7 +174,7 @@
 
             <!-- mobile -->
             <source srcset="./images/product-card-mobile@1x.webp 1x, ./images/product-card-mobile@2x.webp 2x" type="image/webp">
-            <img class="product-card__image" src="./images/product-card-mobile@1x.jpg" srcset="./images/product-card-mobile@2x.jpg 2x" alt="" width="260" height="315" aria-describedby="product-card-title">
+            <img class="product-card__image" src="./images/product-card-mobile@1x.jpg" srcset="./images/product-card-mobile@2x.jpg 2x" alt="" width="260" height="315" aria-describedby="product-card-title" loading="lazy">
           </picture>
 
           <p class="product-card__price">Цена: 990 руб.</p>
