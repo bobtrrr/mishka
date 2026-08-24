@@ -10,11 +10,25 @@
 
   box-sizing: border-box;
 
+  transform: scale(1.5);
+
+  transition:
+    transform 0.1s ease-out,
+    opacity 0.1s ease-out,
+    visibility 0.1s ease-out;
+
   &--opened {
     position: fixed;
 
     opacity: 1;
     visibility: visible;
+
+    transform: scale(1);
+
+    transition:
+      transform 0.3s ease-out,
+      opacity 0.3s ease-out,
+      visibility 0.3s ease-out;
   }
 }
 
