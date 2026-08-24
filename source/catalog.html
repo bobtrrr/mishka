@@ -12,14 +12,14 @@
   <link rel="preload" media="(max-width: 727px)" href="./images/logo-mobile.svg" as="image" fetchpriority="high">
 
   <!-- FONTS -->
-  <link rel="preload" href="./fonts/opensans/opensans.woff2" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/opensans/opensansbold.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
   <!-- STYLES -->
   <link rel="preload" href="./styles/styles.scss" as="style">
 
   <!-- SCRIPTS -->
-  <link rel="preload" href="./scripts/index.js">
+  <link rel="preload" href="./scripts/index.js" as="script">
 
   <!-- ICONS -->
   <link rel="icon" href="./favicon.ico" sizes="48x48 32x32 16x16">
@@ -37,7 +37,7 @@
 <body class="page__body page__layout">
   <header class="page__header page-header">
     <div class="container">
-      <nav class="page-header__main-nav main-nav main-nav--nojs">
+      <nav class="page-header__main-nav main-nav main-nav--nojs" aria-label="Гланое меню">
         <div class="main-nav__top">
           <a class="main-nav__logo logo" href="index.html" aria-label="Главная страница | Mishka">
             <picture>
@@ -47,7 +47,7 @@
             </picture>
           </a>
 
-          <button class="main-nav__button toggle-button" type="button" aria-label="Открыть меню">
+          <button class="main-nav__button toggle-button" type="button" aria-label="Открыть меню" aria-controls="main-menu" aria-expanded="true">
             <span class="toggle-button__line"></span>
             <span class="toggle-button__line"></span>
             <span class="toggle-button__line"></span>
@@ -55,17 +55,17 @@
           </button>
         </div>
 
-        <div class="main-nav__menu">
-          <ul class="main-nav__site-nav site-nav main-nav__menu-list">
+        <div class="main-nav__menu" id="main-menu">
+          <ul class="main-nav__site-nav site-nav main-nav__menu-list" aria-label="Основыне разделы сайта">
             <li class="site-nav__item main-nav__menu-item">
-              <a class="site-nav__link" href="#">Каталог товаров</a>
+              <a class="site-nav__link" href="#" aria-current="page">Каталог товаров</a>
             </li>
             <li class="site-nav__item main-nav__menu-item">
               <a class="site-nav__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
 
-          <ul class="main-nav__user-nav user-nav main-nav__menu-list">
+          <ul class="main-nav__user-nav user-nav main-nav__menu-list" aria-label="Меню пользователя">
             <li class="user-nav__item main-nav__menu-item">
               <a class="user-nav__link user-nav__link--search" href="#">
                 <div class="user-nav__icon-container">
@@ -128,7 +128,7 @@
 
                 <!-- mobile -->
                 <source srcset="./images/catalog-1@1x.webp 1x, ./images/catalog-mobile-1@2x.webp 2x" type="image/webp">
-                <img class="product-preview__image" src="./images/catalog-mobile-1@1x.jpg" srcset="./images/catalog-mobile-1@2x.jpg 2x" width="260" height="195" alt="#">
+                <img class="product-preview__image" src="./images/catalog-mobile-1@1x.jpg" srcset="./images/catalog-mobile-1@2x.jpg 2x" width="260" height="195" alt="#" fetchpriority="high">
               </picture>
             </a>
 
@@ -168,7 +168,7 @@
 
                 <!-- mobile -->
                 <source srcset="./images/catalog-2@1x.webp 1x, ./images/catalog-mobile-2@2x.webp 2x" type="image/webp">
-                <img class="product-preview__image" src="./images/catalog-mobile-2@1x.jpg" srcset="./images/catalog-mobile-2@2x.jpg 2x" width="260" height="195" alt="#">
+                <img class="product-preview__image" src="./images/catalog-mobile-2@1x.jpg" srcset="./images/catalog-mobile-2@2x.jpg 2x" width="260" height="195" alt="#" fetchpriority="high">
               </picture>
             </a>
 
@@ -207,7 +207,7 @@
 
                 <!-- mobile -->
                 <source srcset="./images/catalog-3@1x.webp 1x, ./images/catalog-mobile-3@2x.webp 2x" type="image/webp">
-                <img class="product-preview__image" src="./images/catalog-mobile-3@1x.jpg" srcset="./images/catalog-mobile-3@2x.jpg 2x" width="260" height="195" alt="#">
+                <img class="product-preview__image" src="./images/catalog-mobile-3@1x.jpg" srcset="./images/catalog-mobile-3@2x.jpg 2x" width="260" height="195" alt="#" fetchpriority="high">
               </picture>
             </a>
 
@@ -246,7 +246,7 @@
 
                 <!-- mobile -->
                 <source srcset="./images/catalog-mobile-4@1x.webp 1x, ./images/catalog-mobile-4@2x.webp 2x" type="image/webp">
-                <img class="product-overview__image" src="./images/catalog-mobile-4@1x.png" srcset="./images/catalog-mobile-4@2x.png 2x" width="260" height="150" alt="">
+                <img class="product-overview__image" src="./images/catalog-mobile-4@1x.png" srcset="./images/catalog-mobile-4@2x.png 2x" width="260" height="150" alt="" fetchpriority="high">
               </picture>
             </div>
 

@@ -72,26 +72,14 @@
 }
 
 .contacts__title {
-  margin: 0;
   margin-bottom: 28px;
-
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 120%;
-  color: $text-color-secondary;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 49px;
-
-    font-size: 43px;
-    line-height: 116%;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 34px;
-
-    font-size: 53px;
-    line-height: 108%;
   }
 }
 

@@ -6,7 +6,10 @@ let focusedElementBeforeModal;
 const openModal = () => {
   focusedElementBeforeModal = document.activeElement;
   modal.classList.add('modal--opened');
-  modal.focus();
+
+  setTimeout(() => {
+    modal.focus();
+  }, 0);
 };
 
 const closeModal = () => {

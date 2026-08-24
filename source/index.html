@@ -17,14 +17,14 @@
   <link rel="preload" media="(max-width: 727px)" href="./images/logo-mobile.svg" as="image" fetchpriority="high">
 
   <!-- FONTS -->
-  <link rel="preload" href="./fonts/opensans/opensans.woff2" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/opensans/opensansbold.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensans/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
   <!-- STYLES -->
   <link rel="preload" href="./styles/styles.scss" as="style">
 
   <!-- SCRIPTS -->
-  <link rel="preload" href="./scripts/index.js">
+  <link rel="preload" href="./scripts/index.js" as="script">
 
   <!-- ICONS -->
   <link rel="icon" href="./favicon.ico" sizes="48x48 32x32 16x16">
@@ -45,7 +45,7 @@
 <body class="page__body page__layout">
   <header class="page__header page-header">
     <div class="container">
-      <nav class="page-header__main-nav main-nav main-nav--nojs">
+      <nav class="page-header__main-nav main-nav main-nav--nojs" aria-label="Гланое меню">
         <div class="main-nav__top">
           <a class="main-nav__logo logo" href="index.html" aria-label="Главная страница | Mishka">
             <picture>
@@ -55,7 +55,7 @@
             </picture>
           </a>
 
-          <button class="main-nav__button toggle-button" type="button" aria-label="Открыть меню">
+          <button class="main-nav__button toggle-button" type="button" aria-label="Открыть меню" aria-controls="main-menu" aria-expanded="true">
             <span class="toggle-button__line"></span>
             <span class="toggle-button__line"></span>
             <span class="toggle-button__line"></span>
@@ -63,8 +63,8 @@
           </button>
         </div>
 
-        <div class="main-nav__menu">
-          <ul class="main-nav__site-nav site-nav main-nav__menu-list">
+        <div class="main-nav__menu" id="main-menu">
+          <ul class="main-nav__site-nav site-nav main-nav__menu-list" aria-label="Основыне разделы сайта">
             <li class="site-nav__item main-nav__menu-item">
               <a class="site-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -73,7 +73,7 @@
             </li>
           </ul>
 
-          <ul class="main-nav__user-nav user-nav main-nav__menu-list">
+          <ul class="main-nav__user-nav user-nav main-nav__menu-list" aria-label="Меню пользователя">
             <li class="user-nav__item main-nav__menu-item">
               <a class="user-nav__link user-nav__link--search" href="#">
                 <div class="user-nav__icon-container">
@@ -145,7 +145,7 @@
       <section class="product-card">
         <div class="product-card__content container">
           <header class="product-card__headline">
-            <h2 class="product-card__title" id="product-card-title">Вязаные корзинки</h2>
+            <h2 class="product-card__title title" id="product-card-title">Вязаные корзинки</h2>
             <p class="product-card__chevron">ТОВАР НЕДЕЛИ</p>
           </header>
 
@@ -191,7 +191,7 @@
       </section>
 
       <section class="about container">
-        <h2 class="about__title">Коротко о нас:</h2>
+        <h2 class="about__title title">Коротко о нас:</h2>
 
         <ul class="about__list">
           <li class="about__item about__item--eco">Экологически<br> чистые материалы</li>
@@ -203,37 +203,42 @@
         </ul>
       </section>
 
-      <section class="reviews" role="region" aria-roledescription="Карусель" aria-labelledby="reviews-title">
+      <section class="reviews" aria-roledescription="Карусель" aria-labelledby="reviews-title">
         <div class="reviews__content-wrapper container">
-          <h2 class="reviews__title" id="reviews-title">Отзывы</h2>
+          <h2 class="reviews__title title" id="reviews-title">Отзывы</h2>
 
           <ul class="reviews__list" id="slider-list">
-            <li class="reviews__item reviews__item--active review-card" role="group" aria-roledescription="Слайд" aria-label="1 из 3">
+            <li class="reviews__item reviews__item--active review-card">
+              <div class="review-card" role="group" aria-roledescription="Слайд" aria-label="1 из 3">
+                <p class="review-card__text">
+                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
+                  у популярных инстамамочек.
+                  В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+                  и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
 
-              <p class="review-card__text">
-                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
-                у популярных инстамамочек.
-                В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-                и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
-
-              <p class="review-card__author">Анастасия Красильникова <span class="review-card__username">@misssssiskras</span></p>
+                <p class="review-card__author">Анастасия Красильникова <span class="review-card__username">@misssssiskras</span></p>
+              </div>
             </li>
 
-            <li class="reviews__item review-card" role="group" aria-roledescription="Слайд" aria-label="2 из 3">
-              <p class="review-card__text">
-                Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
+            <li class="reviews__item review-card">
+              <div class="review-card" role="group" aria-roledescription="Слайд" aria-label="2 из 3">
+                <p class="review-card__text">
+                  Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
 
-              <p class="review-card__author">Петруха Иванов <span class="review-card__username">@chickenpetrrr</span></p>
+                <p class="review-card__author">Петруха Иванов <span class="review-card__username">@chickenpetrrr</span></p>
+              </div>
             </li>
 
-            <li class="reviews__item review-card" role="group" aria-roledescription="Слайд" aria-label="3 из 3">
-              <p class="review-card__text">
-                Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
+            <li class="reviews__item review-card">
+              <div class="review-card" role="group" aria-roledescription="Слайд" aria-label="3 из 3">
+                <p class="review-card__text">
+                  Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                </p>
 
-              <p class="review-card__author">Тарелочница <span class="review-card__username">@lovereat</span></p>
+                <p class="review-card__author">Тарелочница <span class="review-card__username">@lovereat</span></p>
+              </div>
             </li>
           </ul>
 
@@ -258,7 +263,7 @@
 
       <section class="contacts">
         <div class="contacts__content-wrapper">
-          <h2 class="contacts__title">Контакты</h2>
+          <h2 class="contacts__title title">Контакты</h2>
 
           <address class="contacts__address">
             <p class="contacts__text">
